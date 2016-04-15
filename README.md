@@ -1,28 +1,34 @@
 CSS Slicer
-----------
+-----------
 
-to install run command
-npm install https://github.com/wpbakery/css-slicer.git --save
+Use CSS Slicer to cut css rules out of file
 
+To install run command
 
-
----------
-
-npm install grunt-postcss --save
+    npm install https://github.com/wpbakery/css-slicer.git --save
 
 
+
+Grunt config
+------------
+add grunt-postcss to your project
+
+    npm install grunt-postcss --save
+
+
+
+configurete grunt
 module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        
-
-        postcss: {
+        postcss: { //configure postcss
             options: {
                 processors: [
+                    //add css-cutter to postcss processors
                     require('postcss-css-cutter')({
                             shards: {
-                                'vce-tta': {
+                                'vce-tta': { //shard name used only to identify shards
                                     'vendorPrefix' : '.vc_',
                                     'componentPrefix': 'tta-',
                                     'properties': {
@@ -32,34 +38,10 @@ module.exports = function (grunt) {
                                                 'blue'
                                             ]
                                         },
-                                        'position': {
-                                            'prefix': 'tabs-position-',
-                                            'values': [
-                                                'top'
-                                            ]
-                                        },
                                         'style': {
                                             'prefix': 'style-',
                                             'values': [
                                                 'modern'
-                                            ]
-                                        },
-                                        'shape': {
-                                            'prefix': 'shape-',
-                                            'values': [
-                                                'round'
-                                            ]
-                                        },
-                                        'spacing': {
-                                            'prefix': 'spacing-',
-                                            'values': [
-                                                '1'
-                                            ]
-                                        },
-                                        'gap': {
-                                            'prefix': 'gap-',
-                                            'values': [
-                                                '1'
                                             ]
                                         }
                                     }
@@ -69,12 +51,10 @@ module.exports = function (grunt) {
                 ]
             },
             dist: {
-                src: 'post_src/style.css',
-                dest: 'post_src/style_dist.css'
+                src: 'src/style.css',
+                dest: 'dist/style.css'
             }
         }
 
     });
-
-
 };
