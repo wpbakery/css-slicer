@@ -23,7 +23,7 @@ module.exports = postcss.plugin('cssCutter', function cssCutter(options) {
                 var prefix = escapeRegexpString(element.vendorPrefix + element.componentPrefix + element.properties[prop].prefix);
 
                 var propValues = element.properties[prop].values.map(function (val) {
-                    return escapeRegexpString(val)+'(?:\\s|[.#,+~:>[{-_])';
+                    return escapeRegexpString(val)+'(?:\\s|[.#,+~:>[{])';
                 });
 
                 var prefixFoundIndex = _.findIndex(filters, {'prefix': prefix});
