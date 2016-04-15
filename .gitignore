@@ -1,0 +1,12 @@
+### JetBrains template
+# User-specific stuff:
+.idea/
+
+### Node template
+# Logs
+npm-debug.log*
+
+# Runtime data
+
+# Dependency directories
+node_modules/

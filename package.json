@@ -1,0 +1,19 @@
+{
+  "name": "postcss-css-cutter",
+  "version": "0.1.0",
+  "description": "Cut unused css rules out of css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpbakery/css-slicer.git"
+  },
+  "author": "Vasilij, WP Bakery",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "postcss": "^5.0.19"
+  }
+}
