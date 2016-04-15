@@ -1,7 +1,10 @@
 CSS Slicer
 -----------
 
-Use CSS Slicer to cut css rules out of file
+Use CSS Slicer to cut css rules out of file.
+
+This processor will find all css selectors in your files what has prefix defined by options (vendorPrefix + componentPrefix + propertyPrefix) and remove all all found rules except given.
+
 
 To install run command
 
