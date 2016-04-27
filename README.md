@@ -32,22 +32,19 @@ module.exports = function (grunt) {
                     require('postcss-css-cutter')({
                             shards: {
                                 'vce-tta': { //shard name used only to identify shards
-                                    'vendorPrefix' : '.vc_',
-                                    'componentPrefix': 'tta-',
-                                    'properties': {
-                                        'color': {
-                                            'prefix': 'color-',
-                                            'values': [
-                                                'blue'
-                                            ]
-                                        },
-                                        'style': {
-                                            'prefix': 'style-',
-                                            'values': [
-                                                'modern'
-                                            ]
-                                        }
-                                    }
+                                    'color': {
+                                        'prefix': '.vc_tta-color-',
+                                        'values': [
+                                            'blue',
+                                            'turquoise'
+                                        ]
+                                    },
+                                    'style': {
+                                        'prefix': '.vc_tta-style-',
+                                        'values': [
+                                            'modern'
+                                        ]
+                                    },
                                 }
                             }
                         })

@@ -19,10 +19,10 @@ module.exports = postcss.plugin('cssCutter', function cssCutter(options) {
         for (var shard in options.shards) {
             var element = options.shards[shard];
 
-            for (var prop in element.properties) {
-                var prefix = escapeRegexpString(element.vendorPrefix + element.componentPrefix + element.properties[prop].prefix);
+            for (var prop in element) {
+                var prefix = escapeRegexpString(element[prop].prefix);
 
-                var propValues = element.properties[prop].values.map(function (val) {
+                var propValues = element[prop].values.map(function (val) {
                     return escapeRegexpString(val)+'(?:\\s|[.#,+~:>[{])';
                 });
 
